@@ -2,6 +2,7 @@
 
 namespace App\Observers;
 
+use App\Events\BookingCreated;
 use App\Models\Activity;
 use App\Models\Booking;
 
@@ -17,6 +18,8 @@ class BookingObserver
         if ($activity) {
             $activity->decrement('available_slots', $booking->slots_booked);
         }
+
+        event(new BookingCreated($booking));
     }
 
 }
