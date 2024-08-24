@@ -8,7 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Activity extends Model
 {
     protected $fillable = [
-        'name', 'description', 'location', 'price', 'available_slots', 'start_date',
+        'name',
+        'description',
+        'location',
+        'price',
+        'available_slots',
+        'start_date',
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
 
 }

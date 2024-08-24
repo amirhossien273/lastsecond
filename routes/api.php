@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\BookingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource('activities', ActivityController::class);
+
+Route::post('bookings', [BookingController::class, 'store'])->middleware('check.slots');
 
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

@@ -22,7 +22,7 @@ class ActivityController extends Controller
 
     /**
      *
-     * @param  \App\Http\Requests\ActivityRequest  $request
+     * @param  ActivityRequest  $request
      * @return ActivityResource
      * 
      */
@@ -34,7 +34,7 @@ class ActivityController extends Controller
 
     /**
      *
-     * @param  \App\Models\Activity  $activity
+     * @param  Activity  $activity
      * @return ActivityResource
      * 
      */
@@ -45,8 +45,8 @@ class ActivityController extends Controller
 
     /**
      *
-     * @param  \App\Http\Requests\ActivityRequest  $request
-     * @param  \App\Models\Activity  $activity
+     * @param  ActivityRequest  $request
+     * @param  Activity  $activity
      * @return ActivityResource
      * 
      */
@@ -58,7 +58,7 @@ class ActivityController extends Controller
 
     /**
      *
-     * @param  \App\Models\Activity  $activity
+     * @param  Activity  $activity
      * @return Response
      * 
      */
